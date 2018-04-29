@@ -1,14 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>CopyHP1</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <header>
+    <div class="heading">
+      <%= image_tag ("sarara-logo.png") %>
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="">ニュース</a></li>
+        <li><a href="">ガーデンレストラン サララとは</a></li>
+        <li><a href="">営業時間・料金</a></li>
+        <li><a href="">アクセス</a></li>
+        <li><a href="">ご予約</a></li>
+      </ul>
+    </div>
+  </header>
+  <contents>
+    <section class="news">
+       <div class=contents_title><h2>NEWS</h2>ニュース</div>
+       <a href="http://www.kg-sarara.jp/archive">ニュース一覧へ</a>
+    </section>
+    <section class="about_sarara">
+      <div class=contents_title><h2>About SARARA</h2>ガーデンレストランサララとは</div>
+      <a class="top_text">
+       "本物を届けよう"のコンセプトを掲げ、新鮮な野菜を贅沢に使い、<br>老若男女問わずに安心して食を楽しめる和食中心の自然食ランチビュッフェレストランです<br>
+       季節ごとに採れる新鮮な野菜を使用し、四季折々の特徴を生かしたメニューで<br>お客様に"食の楽しみ"を提供します。
+      </a>
+      <div class="photo_and_text">
+        <ul class="first">
+        <li>
+        <%= image_tag("news-01.png") %> 
+        <a>ガーデンレストランサララには本物の料理人がいます。経験豊富な料理人が手作りにこだわり、旬の食材を使用して丁寧に心を込めて調理しております。</a></li>
+        <li>
+        <%= image_tag("news-02.png") %>
+        <a>和を中心とした常時５０種類の手作り料理は、旬の野菜を贅沢に使用しております。毎日仕入れる新鮮な食材の味を生かすために余分な調味料などは一切使用しておりません。</a>
+        </li>
+        <li>
+        <%= image_tag("news-03.png") %>
+        <a>お飲み物は全部で10種類以上、食後には手作りのデザートやドリンクも充実しています。自家焙煎による新鮮で風味豊かなコーヒーや、茶葉を自分のお好みで配合して飲めるハーブティー、手作りのケーキやクッキーなどもお楽しみいただけます。</a>
+        </li>
+        </ul>
+        <ul class="second">
+        <li>
+        <%= image_tag("news-04.png") %>
+        <a>ガーデンレストランサララのスタッフはお客様の居心地の良さを常に考えてサービスを提供しています。心からのおもてなしを重視しており、マニュアルはありません。人と人とのコミュニケーションを提供しております。</a>
+        </li>
+        <li>
+        <%= image_tag("news-05.png") %>
+        <a>160席ある広々とした店内は高い天井と落ち着いた雰囲気を演出して開放感を持ち合わせます。隣接する三春ハーブ花ガーデンの色鮮やかな花や香る草木を眺めながら、自然溢れる環境の中でゆっくりとした時間とともに楽しめる環境も特徴です。</a>
+        </li>
+        <li>
+          <%= image_tag("news-06.png") %>
+          <a>お弁当屋仕出しはお客様のご要望を聞き、四季折々の食材を使用した特徴の生かしたメニューで、料理人が一つ一つ心を込めて手作りしております。</a>
+        </li>
+        </ul>
+      </div>
+    </section>
+    <section class="opening_and_fee">
+       <div class=contents_title><h2>OPENING and FEE</h2>営業時間・料金</div>
+      <div class="left">
+        <%= image_tag("locations.png") %>
+      </div>
+      <div class="right">
+        <h3>営業時間</h3>
+        <ul>
+        <li>
+        <h4>昼<h4>
+        11:00から16:00まで<br>(最終入店時間)15:00<br><span>三春観光協会が開花宣言を出した翌日から平成30年5月6日までの期間、<br>朝10:30～営業いたします。</span>
+        </li>
+        <li>
+        <h4>休</h4>
+        3月から11月:無休<br>12月から2月:毎週火曜日(火曜日が祝日の場合は翌日)
+        </li>
+        </ul>
+        <h3 style="display: inline">料金のご案内</h3><a>当店はビュッフェ形式です</a>
+        <table>
+          <tr>
+            <th>全日</th>
+            <th>昼(時間無制限)</th>
+          </tr>
+          <tr>
+            <td>大人(中学生以上)</td>
+            <td>1,690円(税込)</td>
+          </tr>
+          <tr>
+            <td>子供(4歳～小学6年生)</td>
+            <td>820円(税込)</td>
+          </tr>
+          <tr>
+            <td>幼児(3歳以下)</td>
+            <td>無料</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section class="access">
+      <div class=contents_title><h2>ACCESS</h2>アクセス</div>
+      <div class="left">
+        <table>
+        <tr>
+          <td width=80px>郡山駅方面から</td>
+          <td>車で約15分。美術館通りを東部ニュータウン方面へ直進。郡山美術館通過後、1つ目の信号を左折し約3キロ直進。入口の右手の看板が目印。</td>
+        </tr>
+        </table>
+        <table>
+          <tr>
+            <td width=80px>高速道路から</td>
+            <td>磐越道郡山東I.Cから車で約10分。郡山東I.Cを降りた後、最初の信号を左折して、次の信号を左折。1つ目の信号を左折後、約5キロ直進。左手の看板が見えたら次の信号を左折。入口の右手の看板が目印。</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td width=80px>いわき方面から</td>
+            <td>谷田川のセブンイレブン前交差点を右折後約6キロ直進。宮城中学校前交差点を右折して一つ目の信号を右折。入口の右手の看板が目印。</td>
+          </tr>
+        </table>
+      </div>
+      <div class="right">
+        <table>
+          <tr>
+          <td>住所</td>
+          <td>〒963-7723<br>福島県田村郡三春町大字斎藤字仁井道348番4</td>
+          </tr>
+          <tr>
+          <td>駐車場</td>
+          <td>200台（大型バス用駐車場有）</td>
+          </tr>
+        </table>  
+      </div>
+    </section>
+    <section class="reserve">
+      <div class=contents_title><h2>RESERVE</h2>ご予約</div>
+      <a>ご予約は "WEB予約フォームへ" をご利用ください。その他のお問い合わせ、ご意見等は下記Emailアドレスへ送信してください。</a>
+      <ul>
+        <li>平成30年4月9日（月）から平成30年5月6日（日）までの期間は一般のお客様のご予約は受け付けておりません。</li>
+        <li>翌日分のご予約はWEBからの受付はできません。大変恐縮ですが、翌日分のご予約は直接電話にてお問い合わせ下さい。</li>
+        <li>ご予約は11時30分まで入店可能な方に限ります。</li>
+        <li>予約席には限りがございます。</li>
+        <li>ご予約頂いたお客様でも若干お待ち頂くことがございますのでご了承くださいませ。</li>
+        <li>当日のご予約はできません。</li>
+      </ul>
+      <div class="information">
+        <table>
+          <tr>
+            <th>電話番号</th>
+            <td> 024-942-1465</td>
+          </tr>
+          <tr>
+            <th>FAX</th>
+            <td>024-942-1466</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>sarara@kiaoragarden.co.jp</td>
+          </tr>
+        </table>
+        <a href="http://www.kg-sarara.jp/reserve">Webご予約フォームへ</a>
+      </div>
+    </section>
+  </contents>
+  <footer>
+    <a>copyright © 2015 Garden Restaurant Sarara All Rights Reserved.</a>
+  </footer>
 </body>
 </html>

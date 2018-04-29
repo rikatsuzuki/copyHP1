@@ -1,15 +1,174 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+body{
+    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+}
+header{
+    heading:465px;
+}
+.heading{
+    height:411px;
+    background-color:BROWN;
+    position:relative;
+    margin:0 auto;
+}
+.heading img{
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+}
+.navbar{
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    background-color:BLACK;
+    height:54px;
+    /*overflow:hidden;*/
+}
+
+
+.navbar ul{
+    position:relative;
+    left:50%;
+    float:left;
+}
+.navbar ul li{
+    position:relative;
+    color:white;
+    list-style-type:none;
+    float:left;
+    left:-50%;
+    margin:auto 30px;
+}
+.navbar a{
+    text-decoration:none;
+    color:white;
+}
+.navbar a:hover{
+    background-color:rgba(192,237,232,0.3);
+}
+.contents_title{
+    text-align:center;
+}
+.contents_title h2{
+    text-align:center;
+    font-size:40px;
+    padding-bottom:0px;    
+}
+
+.news{
+    background-color:white;
+}
+.about_sarara{
+    background-color:#FFFAFA;
+}
+.about_sarara .top_text{
+    display:block;
+    text-align:center;
+}
+/*以下liを3ずつ2段別々の状態でてFlexbox実行の場合*/
+.photo_and_text ul.first{
+    display:flex;
+    flex-wrap:row no-wrap;
+    justify-content:center;  
+    justify-content:space-around; 
+}
+
+.photo_and_text ul.first li{
+    margin-bottom:40px;
+    display:block;
+    list-style-type:none;
+    width:280px;
+}
+.photo_and_text ul.first li img{
+    display:block;
+    margin:auto;
+}
+
+.photo_and_text ul.first li a{
+    display:block;
+    margin-top:10px;
+    margin-right:auto;
+    margin-left:auto;
+    font-size:12px;
+    width:240px;
+}
+.photo_and_text ul.second{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;  
+    justify-content:space-around; 
+}
+
+.photo_and_text ul.second li{
+    margin-bottom:40px;
+    display:block;
+    list-style-type:none;
+    width:280px;
+}
+.photo_and_text ul.second li img{
+    display:block;
+    margin:auto;
+}
+
+.photo_and_text ul.second li a{
+    display:block;
+    margin-top:10px;
+    margin-right:auto;
+    margin-left:auto;
+    font-size:12px;
+    width:240px;
+}
+/*以下liを全部まとめてFlexbox実行の場合*/
+
+/*.photo_and_text ul {*/
+/*    display:flex;*/
+/*    flex-wrap:wrap;*/
+/*    justify-content:center;  */
+/*    justify-content:space-around; */
+/*}*/
+
+/*.photo_and_text ul li{*/
+/*    margin-bottom:40px;*/
+/*    display:block;*/
+/*    list-style-type:none;*/
+/*    width:280px;*/
+/*}*/
+/*.photo_and_text ul li img{*/
+/*    display:block;*/
+/*    margin:auto;*/
+/*}*/
+
+/*.photo_and_text ul li a{*/
+/*    display:block;*/
+/*    margin-top:10px;*/
+/*    margin-right:auto;*/
+/*    margin-left:auto;*/
+/*    font-size:12px;*/
+/*    width:240px;*/
+/*}*/
+.opening_and_fee{
+    background-color:white;
+}
+.access{
+    background-color:#FFFAFA;
+}
+.access .left table{
+    width:300px;
+    height:50px;
+}
+.reserve{
+    background-color:white;
+}
+    
