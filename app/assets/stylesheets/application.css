@@ -11,24 +11,17 @@ h1,h2,h3,h4,h5,h6,p {
 body{
     font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
 }
-header{
-    heading:465px;
+header .heading{
+    height:400px;
+    background-image:url("http://static.tumblr.com/ee155f7…/x6dzm1e/N1wnkzm33/tumblr_static_79odtodo4pogg0o8k8k408ksg.png");
 }
-.heading{
-    height:411px;
-    background-color:BROWN;
-    position:relative;
-    margin:0 auto;
+header .heading p{ /*中央寄せしたい要素の親要素に指定*/
+    display:flex;
+    align-items:center; /*左右中央寄せ*/
+    height:100%;
+    justify-content: center; /*上下左右中央寄せ*/
 }
-.heading img{
-    position:absolute;
-    margin:auto;
-    top:0;
-    bottom:0;
-    right:0;
-    left:0;
-}
-.navbar{
+header .navbar{
     margin:0 auto;
     position:relative;
     overflow:hidden;
@@ -36,14 +29,12 @@ header{
     height:54px;
     /*overflow:hidden;*/
 }
-
-
-.navbar ul{
+header .navbar ul{
     position:relative;
     left:50%;
     float:left;
 }
-.navbar ul li{
+header .navbar ul li{
     position:relative;
     color:white;
     list-style-type:none;
@@ -51,11 +42,11 @@ header{
     left:-50%;
     margin:auto 30px;
 }
-.navbar a{
+header .navbar a{
     text-decoration:none;
     color:white;
 }
-.navbar a:hover{
+header .navbar a:hover{
     background-color:rgba(192,237,232,0.3);
 }
 .contents_title{
@@ -64,7 +55,8 @@ header{
 .contents_title h2{
     text-align:center;
     font-size:40px;
-    padding-bottom:0px;    
+    padding-bottom:0px;
+    padding-top:80px;
 }
 
 .news{
@@ -112,7 +104,7 @@ header{
 }
 
 .photo_and_text ul.second li{
-    margin-bottom:40px;
+    padding-bottom:40px;
     display:block;
     list-style-type:none;
     width:280px;
@@ -160,15 +152,92 @@ header{
 /*}*/
 .opening_and_fee{
     background-color:white;
+    height:650px;
 }
+.clearfix:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+.opening_and_fee .left{
+    float:left;
+    width:50%;
+    position:relative;
+}
+.opening_and_fee .left p{
+    margin-top:30px;
+    left:30%;
+    position:absolute;
+}
+.opening_and_fee .right{
+    float:right;
+    width:50%;
+}
+
+.opening_and_fee .right h3{
+    font-size:17px;
+    margin-top:30px;
+}
+
+.opening_and_fee .right h4{
+    background-color:#666666;
+    color:white;
+    padding:0.3em 0.5em;
+    margin:8px;
+    float:left;
+}
+.opening_and_fee .right  .open a, .holiday a{
+    float:left;
+}
+.opening_and_fee .right .holiday{
+    margin-top:30px;
+}
+.opening_and_fee .right .price{
+    margin-top:30px;
+}
+.opening_and_fee .price table{
+    table-layout:auto;
+    border:0.5px #D3D3D3 solid;
+    border-collapse:collapse; /*線と線の隙間をなくす*/
+    width:400px;
+    height:130px;
+    text-align:center;
+}
+.opening_and_fee .price table td,th{
+    border:0.5px #D3D3D3 solid;
+    border-collapse:collapse;
+    width:50%;
+}
+
 .access{
     background-color:#FFFAFA;
 }
-.access .left table{
-    width:300px;
-    height:50px;
+.access .left{
+    width:50%;
+    float:left;
+    padding-top:30px;
+    padding-bottom:30px;
 }
+
+.access .left table{
+    width:430px;
+    height:50px;
+    padding-left:40px;
+    padding:10px;
+    margin-bottom:10px;
+    background-color:white;
+}
+/*.access .left table th{*/
+/*    border:1px black solid;*/
+/*}*/
+.access .right{
+    width:50%;
+    float:left;
+    padding-top:30px;
+}
+
 .reserve{
     background-color:white;
 }
+
     
